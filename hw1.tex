@@ -6,7 +6,7 @@
 \documentclass[12pt]{article}
  
 \usepackage[margin=1in]{geometry} 
-\usepackage{amsmath,amsthm,amssymb}
+\usepackage{amsmath,amsthm,amssymb,siunitx}
  
 \newcommand{\N}{\mathbb{N}}
 \newcommand{\Z}{\mathbb{Z}}
@@ -39,7 +39,19 @@
 \maketitle
  
 \begin{exercise}{1} %You can use theorem, proposition, exercise, or reflection here.  Modify x.yz to be whatever number you are proving
-It is believed that space has some “graininess” characterized by a length L, although this has never been measured. However, the following parameters which have been measured are believed to be relevant: $c = 3 \times 10^{− 8} m s^{− 1}$, the speed of light,$\hslash = 6.62 \times 10^{− 34} kg m^{2} s^{− 1}$, the Planck constant, and $G = 6.67 \times 10^{− 11} m kg^{− 1} s^{− 2}$, the gravitational constant. Using only these three constants, ﬁnd a ballpark estimate for L. Compare with the radius of an atom.
+It is believed that space has some “graininess” characterized by a length L, although this has never been measured. However, the following parameters which have been measured are believed to be relevant: $c = 3 \times 10^{8} \si{m/s}$, the speed of light,$\hslash = 6.62 \times 10^{−34} \si{kg.m^{2}/ s}$, the Planck constant, and $G = 6.67 \times 10^{−11} \si{m/ kg.s^{2}}$, the gravitational constant. Using only these three constants, ﬁnd a ballpark estimate for L. Compare with the radius of an atom.
+\\
+\\
+\textbf{Solution}
+We are looking for a result with dimensions of length, which in this particular example is given by meters. Note that we obtain this result if we perform the following computation:
+\begin{align*}
+\sqrt{\frac{\hslash G} {c^3}} &= \sqrt{{\frac{\si{kg.m^{2}/s} \times \si{m^3 / kg.s^2}}{\si{m^3/s^3}}}} \\
+&= \sqrt{\frac{\si{m^5/s^3}}{\si{m^3/s^3}}} \\
+&= \sqrt{\si{m^2}} \\
+&= \si{m}.
+\end{align*}
+
+The magnitude of this calculation using the specified values above yields a magnitude of $4.04 \times 10^{-35} \si{m}$. In comparison to the size of an atom, which from Wikipedia is roughly $1 \times 10^{-10} \si{m}$, the graininess of space is over 20 times smaller than the size of an atom. \\
 
 \end{exercise}
  
