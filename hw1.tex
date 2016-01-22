@@ -74,6 +74,19 @@ If I were to make a scale model of a windmill, my guess is that we would be very
 
 \begin{exercise}{4}
 At a paper mill, paper is wound onto a cylinder. Suppose there is a counter which counts the number of revolutions of the cylinder. Find the appropriate relation between the length of paper wound on the cylinder and the number of revolutions. [Hint: it’s non-linear.] Comment on sources of error.
+\\
+\\
+\textbf{Solution}
+The length of paper added each revolution is equal to the circumference of the spool with the wound paper on it. We can determine the circumference of a circle by $2\pi r$, where $r$ is the radius of the circle. This means that for our problem we need to know the radius of the cylinder when empty, given by $r_0$, and the thickness of the paper, $t$. If we denote the number of turns by $n$, then we have that after $n$ turns the radius of the cylinder and paper is going to be given by $r_0 + nt$. The $n^{th} + 1$ turn of the cylinder adds a length of paper given by $2 \pi (r_0 + nt)$. The length of paper on the cylinder after $n$ turns can then be thought of as the length of paper added on each turn of the cylinder. The formula for this is 
+\begin{align*}
+\Sigma_{i = 1}^{n} 2\pi (r_0 + (i - 1)t) &= 2 \pi \Sigma_{i = 1}^{n} (r_0 + (i - 1)t) \\
+&= 2 \pi (\Sigma_{i = 1}^{n} r_0 + \Sigma_{i = 1}^{n} (i - 1) t)\\
+&= 2 \pi (r_0 \Sigma_{i = 1}^{n}1+ t\Sigma_{i = 1}^{n} (i - 1)) \\
+&= 2 \pi (nr_0 + t\Sigma_{i = 0}^{n - 1}i) \\
+&= 2 \pi (nr_0 + t\frac{(n - 1)n}{2}) \\
+&= 2 \pi (nr_0 + \frac{tn^2 - tn}{2}).
+\end{align*}
+The final formula given is the relationship between the number of turns of the cylinder and the length of the paper added. There are potential sources of error. Any error measurement in the thickness of the paper will lead to large sources of error given enough turns. Additionally, if there are any wrinkles or bumps in the paper as it's being wound around the roll then each turn will lead to increasingly large sources of error.
 \end{exercise}
 
 % --------------------------------------------------------------
