@@ -1,0 +1,86 @@
+% --------------------------------------------------------------
+% This is all preamble stuff that you don't have to worry about.
+% Head down to where it says "Start here"
+% --------------------------------------------------------------
+ 
+\documentclass[12pt]{article}
+ 
+\usepackage[margin=1in]{geometry} 
+\usepackage{amsmath,amsthm,amssymb}
+ 
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\Z}{\mathbb{Z}}
+ 
+\newenvironment{theorem}[2][Theorem]{\begin{trivlist}
+\item[\hskip \labelsep {\bfseries #1}\hskip \labelsep {\bfseries #2.}]}{\end{trivlist}}
+\newenvironment{lemma}[2][Lemma]{\begin{trivlist}
+\item[\hskip \labelsep {\bfseries #1}\hskip \labelsep {\bfseries #2.}]}{\end{trivlist}}
+\newenvironment{exercise}[2][Exercise]{\begin{trivlist}
+\item[\hskip \labelsep {\bfseries #1}\hskip \labelsep {\bfseries #2.}]}{\end{trivlist}}
+\newenvironment{reflection}[2][Reflection]{\begin{trivlist}
+\item[\hskip \labelsep {\bfseries #1}\hskip \labelsep {\bfseries #2.}]}{\end{trivlist}}
+\newenvironment{proposition}[2][Proposition]{\begin{trivlist}
+\item[\hskip \labelsep {\bfseries #1}\hskip \labelsep {\bfseries #2.}]}{\end{trivlist}}
+\newenvironment{corollary}[2][Corollary]{\begin{trivlist}
+\item[\hskip \labelsep {\bfseries #1}\hskip \labelsep {\bfseries #2.}]}{\end{trivlist}}
+ 
+\begin{document}
+ 
+% --------------------------------------------------------------
+%                         Start here
+% --------------------------------------------------------------
+ 
+%\renewcommand{\qedsymbol}{\filledbox}
+ 
+\title{Math 5740 Homework 2}%replace X with the appropriate number
+\author{Cory Rindlisbacher\\ %replace with your name
+} %if necessary, replace with your course title
+ 
+\maketitle
+ 
+\begin{exercise}{1} 
+We want to know how many years it would take for the pollution in a lake to reach $5\%$ of its current level, assuming no pollution flows in. Make some simplifying assumptions to estimate this. Find this time for Lake Erie, Lake Michigan, Lake Superior, and the Great Salt Lake where their volumes, $V$ (in cubic meters) and outflow of water $r$ (cubic meters per day) are given in the following table: \\
+\begin{center}
+\begin{tabular}{lll}
+Lake & Volume, $V$ & Outflow of water, $r$ \\ \hline
+Erie & $458 \times 10^9$ & $479 \times 10^6$ \\
+Michigan & $4,871 \times 10^9$ & $433 \times 10^6$ \\
+Superior $12,221 \times 10^9$ & $178 \times 10^6$ \\
+Great Salt Lake & $18.9 \times 10^9$ & $0$ \\
+\end{tabular}
+\end{center}
+
+Clearly state your simplifying assumptions and comment on sources of error. What's different about the Great Salt Lake?
+
+\end{exercise}
+ 
+\begin{exercise}{2}
+Consider the one-dimensional dynamical system 
+$$\frac{dx}{dt} = \sin{x}.$$
+
+\begin{enumerate}
+\item[a)] What are the equilibrium solutions of this dynamical system?
+\item[b)] Find the linear stability of each equilibtrium solution.
+\item[c)] Draw the phase portrait two different ways. First as in the course notes, draw the phase portrait while thinking of $x$ as lying on the real line, and then as $x$ as a point on the circle.
+\end{enumerate}
+\end{exercise}
+
+\begin{exercise}{3}
+A model for the population growth is given by 
+$$\frac{dN}{dt} = f(N) = rN \bigg( \frac{N}{U} - 1 \bigg)\bigg( 1 - \frac{N}{K} \bigg), \qquad N(0) = N_0$$
+where $r, K, U$ are positive parameters with $U < K$.
+
+\begin{enumerate}
+\item[a)] Sketch the function $f(N)$ and find the equilibrium solution.
+\item[b)] Find the linear stability of each equilibrium solution.
+\item[c)] Draw the phase portrait and sketch some of the solutions for different $N_0$ (do not solve the ODE).
+\item[d)] Discuss the behavior of $N(t)$ as $t \rightarrow \infty$.
+\item[e)] Discuss the behavior of $N(t)$ for small $N_0$. This is called critical depensation.
+\end{enumerate}
+\end{exercise}
+
+% --------------------------------------------------------------
+%     You don't have to mess with anything below this line.
+% --------------------------------------------------------------
+ 
+\end{document}
