@@ -41,16 +41,38 @@
 \begin{exercise}{1} 
 We want to know how many years it would take for the pollution in a lake to reach $5\%$ of its current level, assuming no pollution flows in. Make some simplifying assumptions to estimate this. Find this time for Lake Erie, Lake Michigan, Lake Superior, and the Great Salt Lake where their volumes, $V$ (in cubic meters) and outflow of water $r$ (cubic meters per day) are given in the following table: \\
 \begin{center}
-\begin{tabular}{lll}
-Lake & Volume, $V$ & Outflow of water, $r$ \\ \hline
-Erie & $458 \times 10^9$ & $479 \times 10^6$ \\
-Michigan & $4,871 \times 10^9$ & $433 \times 10^6$ \\
-Superior $12,221 \times 10^9$ & $178 \times 10^6$ \\
-Great Salt Lake & $18.9 \times 10^9$ & $0$ \\
-\end{tabular}
+	\begin{tabular}{lll}
+		Lake & Volume, $V$ & Outflow of water, $r$ \\ \hline
+		Erie & $458 \times 10^9$ & $479 \times 10^6$ \\
+		Michigan & $4,871 \times 10^9$ & $433 \times 10^6$ \\
+		Superior & $12,221 \times 10^9$ & $178 \times 10^6$ \\
+		Great Salt Lake & $18.9 \times 10^9$ & $0$ \\
+	\end{tabular}
 \end{center}
 
 Clearly state your simplifying assumptions and comment on sources of error. What's different about the Great Salt Lake?
+\\
+\\
+\textbf{Solution}\\
+The first assumption we make is that the pollution is well mixed and evenly dispersed throughout the lake. Let $P$ be the amount of pollution and $V$ be the volume of water in cubic meters. Then the pollution per cubic meter is the ratio $\frac{P}{V}$. We can model the rate of change of the lake's pollution levels as being proportional to $\frac{P}{V}$ multiplied by the outflow of water, $r$. Thus we get 
+
+$$\frac{dP}{dt} = \frac{P}{V}r.$$ 
+
+Solving the differential equation, we obtain the model 
+
+$$P = P_0 e^{\frac{rt}{V}}.$$
+
+From this model we can determine the amount of time it will take each lake to reach $5\%$ of its initial pollution level. Solving for $t$ we get $t = \ln{(.05)} \frac{V}{r}.$
+\begin{center}
+	\begin{tabular}{lll}
+		Lake & Time (days) & Time (Years) \\ \hline
+		Erie & $2864$ & $7.85$ \\
+		Michigan & $33,700$ & $92.3$ \\
+		Superior & $205,678$ & $563.5$ \\
+		Great Salt Lake & $\infty$ & $\infty$ \\
+	\end{tabular}
+\end{center}
+The difference about the Great Salt Lake in this model is that there is no way for the pollution to leave the lake, and therefore the level will never drop below the initial level.
 
 \end{exercise}
  
