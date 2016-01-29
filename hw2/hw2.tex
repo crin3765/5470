@@ -55,7 +55,7 @@ Clearly state your simplifying assumptions and comment on sources of error. What
 \\
 \\
 \textbf{Solution}\\
-The first assumption we make is that the pollution is well mixed and evenly dispersed throughout the lake. Let $P$ be the amount of pollution and $V$ be the volume of water in cubic meters. Then the pollution per cubic meter is the ratio $\frac{P}{V}$. We can model the rate of change of the lake's pollution levels as being proportional to $\frac{P}{V}$ multiplied by the outflow of water, $r$. Thus we get 
+The first assumption we make is that the pollution is well mixed and evenly dispersed throughout the lake. Let $P$ be the amount of pollution and $V$ be the volume of water in cubic meters. Then the pollution per cubic meter is the ratio $\frac{P}{V}$. We also assume that the rate of flow out of the lake is equal to the rate of flow into the lake. We can model the rate of change of the lake's pollution levels as being proportional to $\frac{P}{V}$ multiplied by the outflow of water, $r$. Thus we get 
 
 $$\frac{dP}{dt} = \frac{P}{V}r.$$ 
 
@@ -63,17 +63,18 @@ Solving the differential equation, we obtain the model
 
 $$P = P_0 e^{\frac{rt}{V}}.$$
 
-From this model we can determine the amount of time it will take each lake to reach $5\%$ of its initial pollution level. Solving for $t$ we get $t = \ln{(.05)} \frac{V}{r}.$
+From this model we can determine the amount of time it will take each lake to reach $5\%$ of its initial pollution level. Solving for $t$ we get $t = \ln{(.05)} \frac{V}{r}.$ The following table lists the results:
 \begin{center}
 	\begin{tabular}{lll}
 		Lake & Time (days) & Time (Years) \\ \hline
 		Erie & $2864$ & $7.85$ \\
 		Michigan & $33,700$ & $92.3$ \\
 		Superior & $205,678$ & $563.5$ \\
-		Great Salt Lake & $\infty$ & $\infty$ \\
+		Great Salt Lake & -- & -- \\
 	\end{tabular}
 \end{center}
-The difference about the Great Salt Lake in this model is that there is no way for the pollution to leave the lake, and therefore the level will never drop below the initial level.
+The difference about the Great Salt Lake in this model is that there is no way for the pollution to leave the lake, and therefore the level will never drop below the initial level. 
+In this model there are a number of sources of error. Each of the simplifying assumptions could very easily be wrong. Additionally we don't take into account evaporation, changes due to weather, nor environmental cleanup programs. We also assume that no additional pollution is being added to the lake, which is clearly an invalid assumption.
 
 \end{exercise}
  
