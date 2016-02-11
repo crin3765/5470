@@ -1,0 +1,25 @@
+\begin{exercise}{1}
+We wrote the Euler-Lagrange equation for the function $P(y) = \int_0^1 F(y, y') \, dx$ as 
+	$$\frac{d}{dx} \, \bigg(\frac{\partial{F}}{\partial{y'}}y' - \frac{\partial{F}}{\partial{y}}\bigg) = 0.$$
+
+\begin{enumerate}
+	\item[a)]
+		For $F = F(y, y')$, prove the following identity:
+			$$\frac{d}{dx} \, \bigg(\frac{\partial{F}}{\partial{y'}} - F \bigg) = y' \bigg[\frac{d}{dx} \, \frac{\partial{F}}{\partial{y'}} - \frac{\partial{F}}{\partial{y}}\bigg].$$
+	\item[b)]
+		Use the identity to show that the Euler-Lagrange equation is equivalent to 
+			$$\frac{\partial{F}}{\partial{y'}}y' - F = C.$$
+
+\end{enumerate}
+
+\textbf{Proof}
+
+\begin{enumerate}
+	\item[a)] To show part a, note the following:
+		\begin{align*}
+			\frac{d}{dx} \, \bigg(\frac{\partial{F}}{\partial{y'}}y' - F \bigg) &= \frac{d}{dx} \, \frac{\partial{F}}{\partial{y'}}y' - \, \frac{d}{dx}F \\
+			&= \frac{d}{dx} \, \frac{\partial{F}}{\partial{y'}}y' - \frac{\partial{F}}{\partial{y}} \, \frac{dy}{dx} \\
+			&= y' \bigg(\frac{d}{dx} \, \frac{\partial{F}}{\partial{y'}} - \frac{\partial{F}}{\partial{y}}\bigg).
+		\end{align*}
+
+\end{enumerate}
