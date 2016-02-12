@@ -1,0 +1,14 @@
+\begin{exercise}{3}
+To find the curve joining the point $(-1, a) \text{ and } (1, a)$ that yields a surface of revolution of minimum area when revolved around the x-axis, we minimize
+$$P(y) = \int_{-1}^{1} 2 \pi y \sqrt{1 + (y')^2} \, dx,$$
+subject to the constraint that $y(-1) = a = y(1)$. Solve the Euler-Lagrange equations for this functional and interpret the solutions.
+\\
+\textbf{Solution}
+\begin{align*}
+	\frac{\partial{F}}{\partial{y'}}y' - F &= \frac{-2 \pi y}{\sqrt{1 + (y')^2}} = C. \\
+\end{align*}
+Solving for $y'$, we get that $y' = K \sqrt{4 \pi^2 y^2 - 1}$. Solving the separable differential equation gives 
+$$K \ln |y + \sqrt{y^2 - 1}| = x.$$
+By manipulating this equation algebraically we can write this in the form $$ y = \frac{e^{2cx} + 1}{2e^{cx}} = \cosh{(cx)}.$$ 
+In order to determine $c$, we need to evaluate the function $\cosh{c(-1)} = a = \cosh{c}$. It is important to note that the function is only defined if $1 \leq a < \infty.$
+\end{exercise}
