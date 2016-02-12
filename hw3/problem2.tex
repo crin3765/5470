@@ -1,0 +1,35 @@
+\begin{exercise}{2}
+Find the stationary functions of $P(y) = \int_0^1F(y, y') \, dx$ for the following functions:
+	\begin{enumerate}
+		\item[a)] $F(y, y') = \frac{\sqrt{1 + (y')^2}}{y}$
+		\item[b)] $F(y, y') = y^2 - (y')^2$
+	\end{enumerate}
+
+\textbf{Solution}
+
+\begin{enumerate}
+	\item[a)] Using the above equality, we have that 
+	\begin{align*}
+		\frac{\partial{F}}{\partial{y'}} - F &= \frac{(y')^2}{{y \sqrt{1 + (y')^2}}} \\
+											 &= \frac{-1}{y \sqrt{1 + (y')^2}}  \\
+											 &= \frac{1}{y^2 \sqrt{1 + (y')^2}} = C.
+	\end{align*}
+	Rearranging the above equation we can get $y' = \frac{\sqrt{b - y^2}}{y}$. This is a separable equation, and yeilds the solution $y = \sqrt{b - x^2}$, where $b$ is a constant.
+
+	\item[b)] Using the same technique as above, we have that 
+	\begin{align*}
+		\frac{\partial{F}}{\partial{y'}} - F &= - (y')^2 - y^2\\
+	\end{align*}
+	Solving for $y'$, we see that 
+	\begin{align*}
+		y' &= \sqrt{a - y^2} \rightarrow \\
+		1 &= \frac{y'}{a - y^2}.
+	\end{align*}
+	This is also a separable equation. Integrating both sides of the above equation gives 
+		$$ \sin^{-1} (\frac{y}{b}) = x,$$
+	where $b$ is a constant. Solving for y gives us $y = b \sin(x)$.
+
+\end{enumerate}
+
+
+\end{exercise}
